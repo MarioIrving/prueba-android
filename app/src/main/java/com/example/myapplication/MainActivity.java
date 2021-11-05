@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                texto.setText("Hola amigos");
+                int newText = texto.getText() == getText(R.string.after_msg).toString() ? R.string.initial_msg : R.string.after_msg;
+                texto.setText(getText(newText));
             }
         });
     }
